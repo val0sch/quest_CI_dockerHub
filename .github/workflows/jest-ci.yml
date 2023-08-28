@@ -31,4 +31,4 @@ jobs:
         with:
           push: true
           context: "{{defaultContext}}:client"
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/questCiDockerHub:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/quest_ci_dockerhub:latest
