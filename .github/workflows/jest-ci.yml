@@ -11,11 +11,11 @@ jobs:
       - name: Goto client and run tests
         run: cd client && npm i && npm test
   docker:
-    needs: test-front
-    if: github.ref == 'refs/heads/main' && needs.test-front.result == 'success'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Debug Info
+  needs: test-front
+  if: github.ref == 'refs/heads/main' && needs.test-front.result == 'success'
+  runs-on: ubuntu-latest
+  steps:
+    - name: Debug Info
       run: |
         echo "GitHub Ref: ${{ github.ref }}"
         echo "Test Front Result: ${{ needs.test-front.result }}"
