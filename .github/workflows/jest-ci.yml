@@ -29,4 +29,4 @@ jobs:
         with:
           push: true
           context: "{{defaultContext}}:client"
-          tags: user/quest_CI:latest
+          tags: val0sch/quest_CI:latest
