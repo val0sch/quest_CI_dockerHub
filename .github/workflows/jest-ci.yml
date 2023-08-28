@@ -15,6 +15,10 @@ jobs:
     if: github.ref == 'refs/heads/main' && needs.test-front.result == 'success'
     runs-on: ubuntu-latest
     steps:
+      - name: Debug Info
+      run: |
+        echo "GitHub Ref: ${{ github.ref }}"
+        echo "Test Front Result: ${{ needs.test-front.result }}"
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
