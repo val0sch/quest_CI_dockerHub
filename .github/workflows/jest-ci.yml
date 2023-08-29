@@ -1,6 +1,6 @@
 name: jest-and-docker-ci
 
-on: pull-request
+on: pull_request
 
 jobs:
   test-front:
